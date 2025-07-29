@@ -13,4 +13,6 @@ ENV N8N_PORT=5678
 EXPOSE 5678
 
 # Default command to run n8n
-CMD ["n8n"]
+ENTRYPOINT ["tini", "--", "n8n"]
+
+
